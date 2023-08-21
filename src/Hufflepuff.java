@@ -17,6 +17,10 @@ private Integer honest;
     @Override
     public String toString() {
         return "Hufflepuff{" +
+                "studentsName='" + getStudentsName() + '\'' +
+                ", faculty='" + getFaculty() + '\'' +
+                ", apparition=" + getApparition() +
+                ", powerOfMagic=" + getPowerOfMagic() + '\'' +
                 "hardworking=" + hardworking +
                 ", loyal=" + loyal +
                 ", honest=" + honest +

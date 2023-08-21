@@ -17,6 +17,10 @@ public class Ravenclaw extends Hogwarts{
     @Override
     public String toString() {
         return "Ravenclaw{" +
+                "studentsName='" + getStudentsName() + '\'' +
+                ", faculty='" + getFaculty() + '\'' +
+                ", apparition=" + getApparition() +
+                ", powerOfMagic=" + getPowerOfMagic() + '\'' +
                 "smart=" + smart +
                 ", wise=" + wise +
                 ", witty=" + witty +
