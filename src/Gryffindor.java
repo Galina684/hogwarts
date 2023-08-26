@@ -5,7 +5,18 @@ public class Gryffindor extends Hogwarts{
     private Integer honor;
     private Integer courage;
 
-
+public void compare (Gryffindor gryffindor){
+    if(nobility+honor+courage>getNobility()+getHonor()+getCourage()){
+        System.out.println(getStudentsName()+ " сильнее "+ gryffindor.getStudentsName()+
+                " по сумме характеристик факультета Гриффиндор");
+    }else {
+        System.out.println(gryffindor.getStudentsName()+ " сильнее "+getStudentsName()+
+                " по сумме характеристик факультета Гриффиндор");
+    }
+}
+    public void printStudent(Gryffindor gryffindor){
+        System.out.println(gryffindor);
+    }
     public Gryffindor(String studentsName, String faculty, Integer apparition, Integer powerOfMagic, Integer nobility,
                       Integer honor, Integer courage) {
         super(studentsName, faculty, apparition, powerOfMagic);

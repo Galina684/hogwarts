@@ -5,6 +5,18 @@ private Integer hardworking;
 private Integer loyal;
 private Integer honest;
 
+public void compare(Hufflepuff hufflepuff){
+    if (hardworking+loyal+honest > getHardworking()+getLoyal()+getHonest()){
+        System.out.println(getStudentsName() + " сильнее " + hufflepuff.getStudentsName()+
+                " по сумме характеристик факультета Пуффендуй");
+    }else {
+        System.out.println(hufflepuff.getStudentsName() + " сильнее " + getStudentsName()+
+                " по сумме характеристик факультета Пуффендуй");
+    }
+}
+    public void printStudent(Hufflepuff hufflepuff){
+        System.out.println(hufflepuff);
+    }
 
     public Hufflepuff(String studentsName, String faculty, Integer apparition, Integer powerOfMagic,
     Integer hardworking, Integer loyal, Integer honest) {

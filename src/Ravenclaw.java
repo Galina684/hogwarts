@@ -4,7 +4,18 @@ public class Ravenclaw extends Hogwarts{
     private Integer smart;
     private Integer wise;
     private Integer witty;
-
+public void compare (Ravenclaw ravenclaw){
+    if(smart+wise+witty>getSmart()+getWise()+getWitty()){
+        System.out.println(getStudentsName() + " сильнее " + ravenclaw.getStudentsName()+
+                " по сумме характеристик факультета Когтевран");
+    }else {
+        System.out.println(ravenclaw.getStudentsName() + " сильнее " + getStudentsName()+
+                " по сумме характеристик факультета Когтевран");
+    }
+}
+    public void printStudent(Ravenclaw ravenclaw){
+        System.out.println(ravenclaw);
+    }
 
     public Ravenclaw(String studentsName, String faculty, Integer apparition, Integer powerOfMagic,
                      Integer smart, Integer wise, Integer witty) {

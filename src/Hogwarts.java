@@ -3,8 +3,19 @@ import java.util.Objects;
 public class Hogwarts {
     private String studentsName;
     private String faculty;
-    private Integer apparition;
-    private Integer powerOfMagic;
+    private Integer apparition; //трансгрессия
+    private Integer powerOfMagic; //сила магии
+
+    public void compare(Hogwarts hogwarts) {
+        if (powerOfMagic + apparition > hogwarts.getPowerOfMagic() + hogwarts.getApparition()) {
+            System.out.println(studentsName + " сильнее " + hogwarts.getStudentsName() +
+                    " по сумме характеристик Хогвартса");
+        } else {
+            System.out.println(hogwarts.getStudentsName() + " сильнее " + studentsName +
+                    " по сумме характеристик Хогвартса");
+        }
+    }
+
 
     public Hogwarts(String studentsName, String faculty, Integer apparition, Integer powerOfMagic) {
         this.studentsName = studentsName;
@@ -67,4 +78,5 @@ public class Hogwarts {
     public int hashCode() {
         return Objects.hash(studentsName, faculty, apparition, powerOfMagic);
     }
+
 }

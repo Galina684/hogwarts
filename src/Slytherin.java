@@ -5,6 +5,18 @@ public class Slytherin extends Hogwarts {
     private Integer determination;
     private Integer ambition;
 
+    public void compare(Slytherin slytherin){
+        if(cunning+determination+ambition > getCunning()+getDetermination()+getAmbition()){
+            System.out.println(getStudentsName()+ " сильнее " + slytherin.getStudentsName()+
+                    " по сумме характеристик факультета Слизерин");
+        }else {
+            System.out.println(slytherin.getStudentsName()+ " сильнее " +getStudentsName()+
+                    " по сумме характеристик факультета Слизерин");
+        }
+    }
+    public void printStudent(Slytherin slytherin){
+        System.out.println(slytherin);
+    }
 
     public Slytherin(String studentsName, String faculty, Integer apparition, Integer powerOfMagic, Integer cunning,
                      Integer determination, Integer ambition) {
