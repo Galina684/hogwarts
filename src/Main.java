@@ -21,13 +21,10 @@ public class Main {
         Hufflepuff sedric = new Hufflepuff("Седрик Диггори", "Пуффендуй", 15, 25, 20, 45, 35);
         Hufflepuff justin = new Hufflepuff("Джастин Финч", "Пуффендуй", 30, 40, 20, 15, 25);
 
-        harry.printStudent(harry);
-        markus.printStudent(markus);
-        zaharia.compare(sedric);
-        drako.compare(harry);
 
-
-
+        ron.compare(germiona);
+        graham.compare(germiona);
+        justin.compare(drako);
 
     }
 

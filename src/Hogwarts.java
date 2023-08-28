@@ -1,20 +1,10 @@
 import java.util.Objects;
 
-public class Hogwarts {
+abstract class Hogwarts {
     private String studentsName;
     private String faculty;
     private Integer apparition; //трансгрессия
     private Integer powerOfMagic; //сила магии
-
-    public void compare(Hogwarts hogwarts) {
-        if (powerOfMagic + apparition > hogwarts.getPowerOfMagic() + hogwarts.getApparition()) {
-            System.out.println(studentsName + " сильнее " + hogwarts.getStudentsName() +
-                    " по сумме характеристик Хогвартса");
-        } else {
-            System.out.println(hogwarts.getStudentsName() + " сильнее " + studentsName +
-                    " по сумме характеристик Хогвартса");
-        }
-    }
 
 
     public Hogwarts(String studentsName, String faculty, Integer apparition, Integer powerOfMagic) {
@@ -22,6 +12,21 @@ public class Hogwarts {
         this.faculty = faculty;
         this.apparition = apparition;
         this.powerOfMagic = powerOfMagic;
+    }
+
+    public int sumOfGrades() {
+        int sum = getApparition() + getPowerOfMagic();
+        return sum;
+    }
+
+    public void compare(Hogwarts hogwarts) {
+        if (this.sumOfGrades() > hogwarts.sumOfGrades()) {
+            System.out.println(studentsName + " сильнее " + hogwarts.getStudentsName() +
+                    " по сумме характеристик Хогвартса");
+        } else {
+            System.out.println(hogwarts.getStudentsName() + " сильнее " + studentsName +
+                    " по сумме характеристик Хогвартса");
+        }
     }
 
     @Override

@@ -1,22 +1,11 @@
 import java.util.Objects;
 
-public class Gryffindor extends Hogwarts{
+public class Gryffindor extends Hogwarts {
     private Integer nobility;
     private Integer honor;
     private Integer courage;
 
-public void compare (Gryffindor gryffindor){
-    if(nobility+honor+courage>getNobility()+getHonor()+getCourage()){
-        System.out.println(getStudentsName()+ " сильнее "+ gryffindor.getStudentsName()+
-                " по сумме характеристик факультета Гриффиндор");
-    }else {
-        System.out.println(gryffindor.getStudentsName()+ " сильнее "+getStudentsName()+
-                " по сумме характеристик факультета Гриффиндор");
-    }
-}
-    public void printStudent(Gryffindor gryffindor){
-        System.out.println(gryffindor);
-    }
+
     public Gryffindor(String studentsName, String faculty, Integer apparition, Integer powerOfMagic, Integer nobility,
                       Integer honor, Integer courage) {
         super(studentsName, faculty, apparition, powerOfMagic);
@@ -25,10 +14,25 @@ public void compare (Gryffindor gryffindor){
         this.courage = courage;
     }
 
+    public int sumOfGrades() {
+        int sum = getNobility() + getHonor() + getCourage();
+        return sum;
+    }
+
+    public void compare(Gryffindor gryffindor) {
+        if (this.sumOfGrades() > gryffindor.sumOfGrades()) {
+            System.out.println(getStudentsName() + " сильнее " + gryffindor.getStudentsName() +
+                    " по сумме характеристик факультета Гриффиндор");
+        } else {
+            System.out.println(gryffindor.getStudentsName() + " сильнее " + getStudentsName() +
+                    " по сумме характеристик факультета Гриффиндор");
+        }
+    }
+
     @Override
     public String toString() {
         return "Gryffindor{" +
-                        "studentsName='" + getStudentsName() + '\'' +
+                "studentsName='" + getStudentsName() + '\'' +
                 ", faculty='" + getFaculty() + '\'' +
                 ", apparition=" + getApparition() +
                 ", powerOfMagic=" + getPowerOfMagic() + '\'' +

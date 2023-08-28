@@ -1,28 +1,32 @@
 import java.util.Objects;
 
-public class Ravenclaw extends Hogwarts{
+public class Ravenclaw extends Hogwarts {
     private Integer smart;
     private Integer wise;
     private Integer witty;
-public void compare (Ravenclaw ravenclaw){
-    if(smart+wise+witty>getSmart()+getWise()+getWitty()){
-        System.out.println(getStudentsName() + " сильнее " + ravenclaw.getStudentsName()+
-                " по сумме характеристик факультета Когтевран");
-    }else {
-        System.out.println(ravenclaw.getStudentsName() + " сильнее " + getStudentsName()+
-                " по сумме характеристик факультета Когтевран");
-    }
-}
-    public void printStudent(Ravenclaw ravenclaw){
-        System.out.println(ravenclaw);
-    }
+
 
     public Ravenclaw(String studentsName, String faculty, Integer apparition, Integer powerOfMagic,
                      Integer smart, Integer wise, Integer witty) {
         super(studentsName, faculty, apparition, powerOfMagic);
-        this.smart=smart;
-        this.wise=wise;
-        this.witty=witty;
+        this.smart = smart;
+        this.wise = wise;
+        this.witty = witty;
+    }
+
+    public int sumOfGrades() {
+        int sum = getSmart() + getWise() + getWitty();
+        return sum;
+    }
+
+    public void compare(Ravenclaw ravenclaw) {
+        if (this.sumOfGrades() > ravenclaw.sumOfGrades()) {
+            System.out.println(getStudentsName() + " сильнее " + ravenclaw.getStudentsName() +
+                    " по сумме характеристик факультета Когтевран");
+        } else {
+            System.out.println(ravenclaw.getStudentsName() + " сильнее " + getStudentsName() +
+                    " по сумме характеристик факультета Когтевран");
+        }
     }
 
     @Override
